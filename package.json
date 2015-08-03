@@ -1,5 +1,6 @@
 {
   "name": "angular-dc",
+  "main": "./dist/angular-dc.js",
   "version": "0.0.8",
   "description": "angular-dc",
   "keywords": [
