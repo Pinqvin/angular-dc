@@ -169,22 +169,10 @@ module.exports = function(grunt) {
                 src: '<%= yo.dist %>/<%= pkg.name %>.js',
                 objectToExport: 'angularDc',
                 deps: {
-                    args: ['angular', 'dc', '_', 'd3'],
-                    'default': ['angular', 'dc', 'lodash', 'd3'],
-                    amd: {
-                        indent: ' ',
-                        items: ['angular', 'dc', 'lodash', 'd3'],
-                        prefix: '\'',
-                        separator: ',',
-                        suffix: '\''
-                    },
-                    global: {
-                        indent: ' ',
-                        items: ['angular', 'dc', '_', 'd3'],
-                        prefix: 'root.',
-                        separator: ',',
-                        suffix: ''
-                    }
+                    'default': ['angular', 'dc', '_', 'd3'],
+                    amd: ['angular', 'dc', 'lodash', 'd3'],
+                    cjs: ['angular', 'dc', 'lodash', 'd3'],
+                    global: ['angular', 'dc', 'lodash', 'd3']
                 }
             }
         },

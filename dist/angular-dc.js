@@ -1,7 +1,7 @@
 (function(root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module unless amdModuleId is set
-        define(['angular', 'dc', 'lodash', 'd3'], function(a0, b1, c2, d3) {
+        define(["angular", "dc", "lodash", "d3"], function(a0, b1, c2, d3) {
             return (root['angularDc'] = factory(a0, b1, c2, d3));
         });
     } else if (typeof exports === 'object') {
@@ -10,9 +10,9 @@
         // like Node.
         module.exports = factory(require("angular"), require("dc"), require("lodash"), require("d3"));
     } else {
-        root['angularDc'] = factory(angular, dc, _, d3);
+        root['angularDc'] = factory(angular, dc, lodash, d3);
     }
-}(this, function(angular, dc, lodash, d3) {
+}(this, function(angular, dc, _, d3) {
 
     'use strict';
     var angularDc = angular.module('angularDc', []);
